@@ -1,37 +1,35 @@
 #include <stdio.h>
 #include "main.h"
 
-/**
- *print_triangle - prints a triangle
- *@size:size parameter of triangle
- *Return: returns nothing
+/*
+ * print_triangle - prints a triangle
+ * @size:size parameter of triangle
+ * Return: returns nothing
  */
 
 void print_triangle(int size)
 {
-    int i, j;
+	int inc1, inc2;
 
-    if (size > 0)
-    {
-        for (i = 1; i <= size; i++)
-        {
-            for ((j = size - i); j > 0; j--)
-            {
-                putchar(' ');
-            }
+	if (size > 0)
+	{
+		for (inc1 = 1; inc1 <= size; inc1++)
+		{
+			for ((inc2 = size - inc1); inc2 > 0; inc2--)
+			{
+				putchar(' ');
+			}
+			for (inc2 = 0; inc2 < inc1; inc2++)
+			{
+				putchar('#');
+			}
 
-            for (j = 0; j < i; j++)
-            {
-                putchar('#');
-            }
-
-            if (i == size)
-            {
-                continue;
-            }
-
-            putchar('\n');
-        }
-    }
+			if (inc1 == size)
+			{
+				continue;
+			}
+			putchar('\n');
+		}
+	}
+	putchar('\n');
 }
-  
